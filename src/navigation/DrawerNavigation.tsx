@@ -12,9 +12,16 @@ const Drawer = createDrawerNavigator();
 export const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
-      initialRouteName="BottomTabsNavigator"
+      initialRouteName="Pantalla1Screen"
       drawerContent={props => <MenuLateral {...props} />}>
-      <Drawer.Screen name="Pantalla1Screen" component={Pantalla1Screen} />
+      <Drawer.Screen
+        options={{
+          headerShown: false,
+          swipeEnabled: false,
+        }}
+        name="Pantalla1Screen"
+        component={Pantalla1Screen}
+      />
       <Drawer.Screen name="Pantalla2Screen" component={Pantalla2Screen} />
       <Drawer.Screen name="Pantalla3Screen" component={Pantalla3Screen} />
       <Drawer.Screen name="StackNavigation" component={StackNavigation} />
