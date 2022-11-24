@@ -2,13 +2,13 @@ import { View, Text, Button } from 'react-native';
 import React from 'react';
 import { MyStackScreenProps } from '../interfaces/MyStackScreenProps';
 
-export const Pantalla2Screen = ({ navigation }: MyStackScreenProps) => {
+export const Pantall1Screen = ({ navigation }: MyStackScreenProps) => {
   return (
     <View>
-      <Text>Pantalla2Screen</Text>
+      <Text>Pantall1Screen</Text>
       <Button
-        title="Ir a Pantalla 3"
-        onPress={() => navigation.navigate('Pantalla3Screen')}
+        title="Ir a Pantalla 2"
+        onPress={() => navigation.navigate('Pantall2Screen')}
       />
     </View>
   );

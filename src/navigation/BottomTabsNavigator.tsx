@@ -1,18 +1,18 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Pantalla1Screen } from '../screens/Pantalla1Screen';
-import { Pantalla2Screen } from '../screens/Pantalla2Screen';
-import { Pantalla3Screen } from '../screens/Pantalla3Screen';
+import { FavoritosScreen } from '../screens/FavoritosScreen';
+import { TransaccionesScreen } from '../screens/TransaccionesScreen';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Platform } from 'react-native';
+import { HomeScreen } from '../screens/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
 export const BottomTabsNavigator = () => {
   return (
-    <Tab.Navigator initialRouteName="Pantalla2Screen">
+    <Tab.Navigator initialRouteName="HomeScreen">
       <Tab.Screen
-        name="Pantalla1Screen"
+        name="HomeScreen"
         options={{
           title: 'Inicio',
           tabBarIcon: props =>
@@ -22,17 +22,17 @@ export const BottomTabsNavigator = () => {
               <Icon name="bone" size={props.size} color={props.color} />
             ),
         }}
-        component={Pantalla1Screen}
+        component={HomeScreen}
       />
       <Tab.Screen
-        name="Pantalla2Screen"
+        name="FavoritosScreen"
         options={{ title: 'Favoritos' }}
-        component={Pantalla2Screen}
+        component={FavoritosScreen}
       />
       <Tab.Screen
-        name="Pantalla3Screen"
+        name="TransaccionesScreen"
         options={{ title: 'Transacciones' }}
-        component={Pantalla3Screen}
+        component={TransaccionesScreen}
       />
     </Tab.Navigator>
   );

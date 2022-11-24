@@ -4,13 +4,13 @@ import { MyStackScreenProps } from '../interfaces/MyStackScreenProps';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLogin, setToken } from '../redux/slices/AuthSlice';
 
-export const Pantalla1Screen = ({ navigation }: MyStackScreenProps) => {
+export const AuthScreen = ({ navigation }: MyStackScreenProps) => {
   const dispatch = useDispatch();
   const { isAuth } = useSelector((state: any) => state.auth);
 
   useEffect(() => {
     if (isAuth) {
-      navigation.navigate('Pantalla2Screen');
+      navigation.navigate('BottomTabsNavigator');
     }
   }, [isAuth, navigation]);
 

@@ -1,29 +1,33 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Pantalla1Screen } from '../screens/Pantalla1Screen';
-import { Pantalla2Screen } from '../screens/Pantalla2Screen';
-import { Pantalla3Screen } from '../screens/Pantalla3Screen';
+import { AuthScreen } from '../screens/AuthScreen';
+import { Pantalla2Screen } from '../screens/FavoritosScreen';
+import { Pantalla3Screen } from '../screens/TransaccionesScreen';
 import { StackNavigation } from './StackNavigation';
 import { MenuLateral } from '../screens/MenuLateralScreen';
 import { BottomTabsNavigator } from './BottomTabsNavigator';
+import SolitariaScreen from '../screens/SolitariaScreen';
 
 const Drawer = createDrawerNavigator();
 
 export const DrawerNavigation = () => {
   return (
     <Drawer.Navigator
-      initialRouteName="Pantalla1Screen"
-      drawerContent={props => <MenuLateral {...props} />}>
+      initialRouteName="AuthScreen"
+      drawerContent={props => <MenuLateral {...props} />}
+      screenOptions={{
+        unmountOnBlur: true,
+      }}>
+      {/* AuthScreen */}
       <Drawer.Screen
         options={{
           headerShown: false,
           swipeEnabled: false,
         }}
-        name="Pantalla1Screen"
-        component={Pantalla1Screen}
+        name="AuthScreen"
+        component={AuthScreen}
       />
-      <Drawer.Screen name="Pantalla2Screen" component={Pantalla2Screen} />
-      <Drawer.Screen name="Pantalla3Screen" component={Pantalla3Screen} />
+      <Drawer.Screen name="SolitariaScreen" component={SolitariaScreen} />
       <Drawer.Screen name="StackNavigation" component={StackNavigation} />
       <Drawer.Screen
         name="BottomTabsNavigator"

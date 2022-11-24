@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState = {
   token: '',
@@ -22,5 +22,5 @@ const AuthSlice = createSlice({
   },
 });
 
-export const {setToken, setLogin, setLogout} = AuthSlice.actions;
+export const { setToken, setLogin, setLogout } = AuthSlice.actions;
 export default AuthSlice.reducer;

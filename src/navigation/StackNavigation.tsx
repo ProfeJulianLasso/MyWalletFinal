@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Pantalla1Screen } from '../screens/Pantalla1Screen';
-import { Pantalla2Screen } from '../screens/Pantalla2Screen';
-import { Pantalla3Screen } from '../screens/Pantalla3Screen';
+import { Pantall1Screen } from '../screens/Pantall1Screen';
+import { Pantall2Screen } from '../screens/Pantall2Screen';
+import { Pantall3Screen } from '../screens/Pantall3Screen';
 
 const Stack = createStackNavigator();
 
@@ -20,17 +20,11 @@ export const StackNavigation = () => {
         options={{
           headerTitle: 'Pantalla No. 1',
         }}
-        name="Pantalla1Screen"
-        component={Pantalla1Screen}
+        name="Pantall1Screen"
+        component={Pantall1Screen}
       />
-      <Stack.Screen
-        options={{
-          headerTitle: 'Pantalla No. 2',
-        }}
-        name="Pantalla2Screen"
-        component={Pantalla2Screen}
-      />
-      <Stack.Screen name="Pantalla3Screen" component={Pantalla3Screen} />
+      <Stack.Screen name="Pantall2Screen" component={Pantall2Screen} />
+      <Stack.Screen name="Pantall3Screen" component={Pantall3Screen} />
     </Stack.Navigator>
   );
 };
